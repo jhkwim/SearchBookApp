@@ -2,6 +2,9 @@
 plugins {
     alias(libs.plugins.androidLibrary)
     alias(libs.plugins.kotlinAndroid)
+    alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.com.google.dagger.hilt.android)
+    id("kotlin-kapt")
 }
 
 android {
@@ -13,6 +16,8 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
+
+        buildConfigField("String", "BASE_URL", "\"https://api.itbook.store/1.0/\"")
     }
 
     buildTypes {
@@ -25,20 +30,32 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
+    }
+
+    buildFeatures {
+        buildConfig = true
     }
 }
 
 dependencies {
-
-    implementation(libs.core.ktx)
-    implementation(libs.appcompat)
-    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+
+    // retrofit2
+    implementation(libs.retrofit)
+    implementation(libs.retrofit.kotlin.serialization)
+    implementation(libs.okhttp3.logging)
+
+    implementation(libs.kotlinx.serialization.json)
+
+    // hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
 }

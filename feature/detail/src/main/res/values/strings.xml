@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="book_authors">Authors</string>
+    <string name="book_publisher">Publisher</string>
+    <string name="book_language">Language</string>
+    <string name="book_pages">Pages</string>
+    <string name="book_years">Years</string>
+    <string name="book_isbn10">ISBN-10</string>
+    <string name="book_isbn13">ISBN-13</string>
+</resources>

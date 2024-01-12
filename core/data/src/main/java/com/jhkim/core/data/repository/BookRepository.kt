@@ -6,8 +6,12 @@ import kotlinx.coroutines.flow.Flow
 
 interface BookRepository {
 
-    suspend fun searchBook(query: String, page: Int): Flow<List<Book>>
+    val books: Flow<List<Book>>
 
-    suspend fun getBookDetail(isbn: String): Flow<BookDetail>
+    suspend fun searchBook(query: String)
+
+    suspend fun getBookDetail(isbn13: String): Flow<BookDetail>
+
+    suspend fun clear()
 
 }

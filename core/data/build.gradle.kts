@@ -45,5 +45,6 @@ dependencies {
     kapt(libs.hilt.android.compiler)
 
     implementation(project(":core:network"))
+    implementation(project(":core:database"))
     implementation(project(":core:model"))
 }

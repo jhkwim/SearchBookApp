@@ -22,6 +22,7 @@ kotlinx-serialization-json = "1.6.0"
 constraintlayout = "2.1.4"
 
 coil = "2.5.0"
+room = "2.6.1"
 
 [libraries]
 core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
@@ -47,6 +48,11 @@ constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayo
 
 coil-kt = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+room-gradlePlugin = { group = "androidx.room", name = "room-gradle-plugin", version.ref = "room" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -54,4 +60,6 @@ androidLibrary = { id = "com.android.library", version.ref = "agp" }
 com-google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 org-jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+room = { id = "androidx.room", version.ref = "room" }
+
 

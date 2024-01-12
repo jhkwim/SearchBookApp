@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SearchBookApp</string>
+    <string name="offline">인터넷 연결을 확인하세요.</string>
 </resources>

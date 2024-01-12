@@ -61,4 +61,5 @@ dependencies {
     kapt(libs.hilt.android.compiler)
 
     implementation(project(":feature:search"))
+    implementation(project(":feature:detail"))
 }

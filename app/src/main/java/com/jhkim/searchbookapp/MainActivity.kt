@@ -71,8 +71,6 @@ class MainActivity : AppCompatActivity() {
         super.onStop()
 
         connectivityManager.unregisterNetworkCallback(networkCallback)
-
-        supportFragmentManager.clearFragmentResult(REQUEST_KEY_SEARCH)
     }
 
     private fun isNetworkAvailable(): Boolean {

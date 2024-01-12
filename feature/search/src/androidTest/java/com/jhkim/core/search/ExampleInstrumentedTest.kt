@@ -1,4 +1,4 @@
-package com.jhkim.feature.search
+package com.jhkim.core.search
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

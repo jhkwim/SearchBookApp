@@ -1,6 +1,7 @@
 package com.jhkim.core.network.model
 
 
+import com.jhkim.core.model.BookDetail
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
@@ -21,4 +22,21 @@ data class NetworkBookDetail(
     @SerialName("title") val title: String,
     @SerialName("url") val url: String,
     @SerialName("year") val year: String
+)
+
+fun NetworkBookDetail.toBookDetail() = BookDetail(
+    isbn13 = isbn13,
+    authors = authors,
+    desc = desc,
+    image = image,
+    isbn10 = isbn10,
+    language = language,
+    pages = pages,
+    price = price,
+    publisher = publisher,
+    rating = rating,
+    subtitle = subtitle,
+    title = title,
+    url = url,
+    year = year
 )

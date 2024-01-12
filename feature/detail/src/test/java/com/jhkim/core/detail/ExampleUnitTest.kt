@@ -1,4 +1,4 @@
-package com.jhkim.feature.search
+package com.jhkim.core.detail
 
 import org.junit.Test
 

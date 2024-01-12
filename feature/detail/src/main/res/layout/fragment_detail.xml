@@ -32,9 +32,9 @@
             android:layout_height="wrap_content"
             android:paddingTop="4dp"
             android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/book_rating_star"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/book_rating_star"
-            app:layout_constraintBottom_toBottomOf="@+id/book_rating_star" />
+            app:layout_constraintTop_toTopOf="@+id/book_rating_star" />
 
         <RatingBar
             android:id="@+id/book_rating_star"
@@ -44,8 +44,8 @@
             android:numStars="5"
             android:rating="0.5"
             android:stepSize="0.5"
-            app:layout_constraintTop_toBottomOf="@+id/book_subtitle"
-            app:layout_constraintStart_toEndOf="@+id/book_rating" />
+            app:layout_constraintStart_toEndOf="@+id/book_rating"
+            app:layout_constraintTop_toBottomOf="@+id/book_subtitle" />
 
         <ImageView
             android:id="@+id/book_image"
@@ -228,10 +228,34 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:textSize="16sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/book_info7"
             app:layout_constraintTop_toBottomOf="@id/book_isbn10" />
+
+        <TextView
+            android:id="@+id/book_info8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/book_url"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBaseline_toBaselineOf="@+id/book_url"
+            app:layout_constraintEnd_toEndOf="@+id/book_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/book_info7" />
+
+        <TextView
+            android:id="@+id/book_url"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:linksClickable="true"
+            android:maxLines="1"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/book_info8"
+            app:layout_constraintTop_toBottomOf="@id/book_isbn13" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

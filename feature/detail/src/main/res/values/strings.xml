@@ -7,4 +7,6 @@
     <string name="book_years">Years</string>
     <string name="book_isbn10">ISBN-10</string>
     <string name="book_isbn13">ISBN-13</string>
+    <string name="book_url">url</string>
+    <string name="fail_to_get_detail">도서 정보를 가져오는데 실패했습니다.</string>
 </resources>

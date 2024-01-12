@@ -1,4 +1,4 @@
-package com.jhkim.feature.detail
+package com.jhkim.core.detail
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
